@@ -23,8 +23,7 @@ end
 ---@param ignore_char_case boolean
 ---@return string?
 M.get_user_inputed_pattern = function(ignore_char_case)
-  local char = vim.fn.getchar()
-  char = vim.fn.nr2char(char)
+  local char = vim.fn.getcharstr()
 
   if char == replace_termcodes("<esc>") then
     return nil
